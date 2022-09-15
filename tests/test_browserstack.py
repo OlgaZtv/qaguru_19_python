@@ -3,8 +3,8 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selene import have
 from selene.support.shared import browser
 
-from browserstack_lesson.tests.conftest import create_driver
-from browserstack_lesson.util.attachment import add_video
+from tests.conftest import create_driver
+from util.attachment import add_video
 
 
 @allure.tag('Browserstack mobile')
