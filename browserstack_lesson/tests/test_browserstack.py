@@ -3,8 +3,8 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selene import have
 from selene.support.shared import browser
 
-from browserstack_lesson.browserstack_lesson.tests.conftest import create_driver
-from browserstack_lesson.browserstack_lesson.util.attachment import add_video
+from browserstack_lesson.tests.conftest import create_driver
+from browserstack_lesson.util.attachment import add_video
 
 
 @allure.tag('Browserstack mobile')
@@ -21,7 +21,7 @@ def test_search_wikipedia():
 
 @allure.tag('Browserstack mobile homework')
 @allure.title('Open Wikipedia from Google in Android app')
-def test_search_wikipedia():
+def test_open_wikipedia():
     browser.config.driver = create_driver(test_search_wikipedia)
     browser.element((AppiumBy.CLASS_NAME, "android.widget.LinearLayout")).click()
     browser.element((AppiumBy.CLASS_NAME, "android.widget.EditText")).type("Wikipedia")
